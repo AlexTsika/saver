@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InputComponent } from './input/input.component';
 import { ResultsComponent } from './results/results.component';
+import { RouterModule, Routes } from '@angular/router'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InputComponent,
-    ResultsComponent
+    ResultsComponent,
+    RouterModule.forRoot(routes)
   ],
   imports: [
     BrowserModule
@@ -20,3 +22,6 @@ import { ResultsComponent } from './results/results.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+const routes: Routes = []
+
