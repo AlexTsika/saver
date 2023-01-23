@@ -22,6 +22,3 @@ import { RouterModule, Routes } from '@angular/router'
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-const routes: Routes = []
-
