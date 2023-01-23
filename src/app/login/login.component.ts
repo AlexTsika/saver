@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoginsService } from '../services/logins.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  username: string;
+  password: string;
+
+  constructor(private loginsService: LoginsService, private router: Router)  { 
+    this.username = '';
+    this.password = '';
+  }
+
+  login() {
+   this.loginsService.getUsersFromApi(this.username, this.password);
+  }
+
+
+  ngOnInit(): void {
+  }
 }
