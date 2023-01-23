@@ -1,1 +1,9 @@
 <p>input works!</p>
+<div>
+<input [(ngModel)]="initialAmount" type="number">
+<input [(ngModel)]="monthlyContribution" type="number">
+<input [(ngModel)]="interestRate" type="number">
+<input [(ngModel)]="years" type="number">
+<button (click)="calculateSavings()">Calculate Savings</button>
+<div>{{ totalSavings }}</div>
+</div>
