@@ -2,23 +2,19 @@
     <div class="row">
         <div class="col">
              <div class="mb-3">
-                <div class = "input-group-prepend">
-                    <label for="initialAmount">initial Amount</label>
-                    <input id="initialAmount" [(ngModel)]="initialAmount" type="number" class="form-control">
+                <div class="mb-3 sm-2" >
+                    <input id="initialAmount" [(ngModel)]="initialAmount" type="number" class="form-control" placeholder="Current Savings">
                 </div>
-                <div class="mb-3">
-                    <Label for="monthlyContribution">monthly Contribution</Label>
-                    <input id="monthlyContribution" [(ngModel)]="monthlyContribution" type="number" class="form-control">
+                <div class="mb-3 sm-2">
+                    <input id="monthlyContribution" [(ngModel)]="monthlyContribution" type="number" class="form-control" placeholder="Monthyly Savings">
                 </div>
-                <div class = "mb-3">
-                    <label for="interestRate">interest Rate</label>
-                    <input id="interestRate" [(ngModel)]="interestRate" type="number" class="form-control">
+                <div class = "mb-3 sm-2">
+                    <input id="interestRate" [(ngModel)]="interestRate" type="number" class="form-control" placeholder="your current interest Rate.">
                 </div>
-                <div class = "mb-3">
-                    <label for="years">years</label>
-                    <input id="years" [(ngModel)]="years" type="number" class="form-control">
+                <div class = "mb-3 sm-2">
+                    <input id="years" [(ngModel)]="years" type="number" class="form-control" placeholder="Amount of years">
                 </div>
-                <div>
+                <div class="mb-3 sm-2">
                     <button class="btn btn-primary" (click)="calculateSavings()">Calculate Savings</button>
                 </div>
                 <div>
