@@ -12,14 +12,14 @@ export class LoginsService {
 
   getUsers(username: string, password: string) {
     console.log(username, password);
-    fetch('http://localhost:8000/api/users/' + username)
+    fetch('http://localhost:8000/api/users/name/' + username)
       .then(response => response.json())
       .then(data => {
-        console.log(data[0].password);
-        bcrypt.compare(password, data[0].password, (err, res) => {
+        console.log(data.password);
+        bcrypt.compare(password, data.password, (err, res) => {
           if (res) {
             window.localStorage.setItem('username', username);
-            window.localStorage.setItem('userId', data[0].id);
+            window.localStorage.setItem('userId', data.id);
             this.router.navigate(['/input']);
           } else {
             alert("Wrong password");
