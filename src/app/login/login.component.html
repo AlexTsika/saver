@@ -1,22 +1,22 @@
-<div class="container">
-    <div class="col login">
-    <div class="col-4 offset-4 mt-1 mb-5">
-    </div>
-    <h1 class="main">Saver</h1>
-    <div class="mb-3">
-      <label for="username" class="form-label">Username</label>
-      <input type="text" id="username" class="form-control" [(ngModel)]="username">
-
-
-    </div>
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input type="password" id="password" class="form-control" [(ngModel)]="password">
-
-    </div>
-
-    <button (click)="login()" type="submit" class="btn btn-primary login">Login</button>
-
-    <a class="register" routerLink="/register" routerLinkActive="active">Register</a>
+<div class="row mb-2">
+  <div class="col">
+    <input type="text" id="username" class="form-control" placeholder="Username" [(ngModel)]="username">
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col">
+    <input type="password" id="password" class="form-control" placeholder="Password" (keyup.enter)="login()" [(ngModel)]="password">
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col">
+    <button (click)="login()" type="submit" class="btn btn-light btn-width login">Login</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-light btn-width">
+      <a class="register text-decoration-none text-dark" routerLink="/register" routerLinkActive="active">Register</a>
+    </button>
   </div>
 </div>
