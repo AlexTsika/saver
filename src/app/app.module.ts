@@ -8,6 +8,7 @@ import { ResultsComponent } from './results/results.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
+import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     LoginComponent,
     InputComponent,
     ResultsComponent,
-    RegisterComponent
+    RegisterComponent,
+    ThemeToggleComponent
   ],
   imports: [
     BrowserModule,

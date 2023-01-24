@@ -5,27 +5,27 @@
 </div>
 <div class="row mb-2">
     <div class="col">
-        <input id="initialAmount" [(ngModel)]="initialAmount" type="number" class="form-control input-width" placeholder="Current Savings">
+        <input id="initialAmount" [(ngModel)]="initialAmount" type="number" class="form-control input-custom" placeholder="Current Savings">
     </div>
 </div>
 <div class="row mb-2">
     <div class="col">
-        <input id="monthlyContribution" [(ngModel)]="monthlyContribution" type="number" class="form-control input-width" placeholder="Monthly Savings">
+        <input id="monthlyContribution" [(ngModel)]="monthlyContribution" type="number" class="form-control input-custom" placeholder="Monthly Savings">
     </div>
 </div>
 <div class="row mb-2">
     <div class="col">
-        <input id="interestRate" [(ngModel)]="interestRate" type="number" class="form-control input-width" placeholder="Interest Rate" (keyup.enter)="calculateSavings()">
+        <input id="interestRate" [(ngModel)]="interestRate" type="number" class="form-control input-custom" placeholder="Interest Rate" (keyup.enter)="calculateSavings()">
     </div>
 </div>
 <div class="row mb-2">
     <div class="col">
-        <input type="number" class="form-control input-width" placeholder="Target Amount">
+        <input type="number" class="form-control input-custom" placeholder="Target Amount">
     </div>
 </div>
 <div class="row mb-2">
     <div class="col">
-        <button class="btn btn-dark bg-custom" (click)="calculateSavings()">Calculate Savings</button>
+        <button class="btn btn-custom" (click)="calculateSavings()">Calculate Savings</button>
     </div>
 </div>
 <div class="row mb-5">
