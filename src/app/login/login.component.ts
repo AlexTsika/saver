@@ -18,7 +18,7 @@ export class LoginComponent {
   }
 
   login() {
-   this.loginsService.getUsersFromApi(this.username, this.password);
+   this.loginsService.getUsers(this.username, this.password);
   }
 
 
