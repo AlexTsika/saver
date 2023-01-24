@@ -29,4 +29,34 @@ export class LoginsService {
   };
 
   constructor(private router: Router) { }
+
+  register(name: string, email: string, password: string) {
+
+    console.log(JSON.stringify({
+      name: name,
+      email: email,
+      password: password
+    }));
+    fetch('http://localhost:8000/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        password: password
+      })
+    })
+      .then(response => {
+        console.log(response.status);
+        if (response.status == 201) {
+          alert("Registration successful");
+          this.router.navigate(['/login']);
+        } else {
+          alert("Something went wrong");
+        }
+      })
+    }
+    
 }
