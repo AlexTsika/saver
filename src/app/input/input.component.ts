@@ -11,28 +11,27 @@ export class InputComponent {
   interestRate: any = '';
   years: any= '';
   totalSavings: any = '';
+  storedUsername: string = 'username';
 
-  
-    calculateSavings() {
-      let savingsByYear = [5, 10, 15, 20, 25, 30];
-  
-      for (let year of savingsByYear) {
-        this.totalSavings = this.initialAmount;
-        this.years = year;
-  
-        for (let i = 0; i < this.years; i++) {
-          for (let j = 0; j < 12; j++) {
-            this.totalSavings += this.monthlyContribution;
-            this.totalSavings += this.totalSavings * (this.interestRate / 12);
-          }
+  calculateSavings() {
+    let savingsByYear = [5, 10, 15, 20, 25, 30];
+
+    for (let year of savingsByYear) {
+      this.totalSavings = this.initialAmount;
+      this.years = year;
+
+      for (let i = 0; i < this.years; i++) {
+        for (let j = 0; j < 12; j++) {
+          this.totalSavings += this.monthlyContribution;
+          this.totalSavings += this.totalSavings * (this.interestRate / 12);
         }
-        console.log(`Total savings after ${year} years: ${this.totalSavings}`);
-        localStorage.setItem(`Total savings after ${year} years`, this.totalSavings);
       }
+      console.log(`Total savings after ${year} years: ${this.totalSavings}`);
+      localStorage.setItem(`Total savings after ${year} years`, this.totalSavings);
     }
   }
-  
-  
-
-
-  
+    
+  ngOnInit() {
+    this.storedUsername = localStorage.getItem('username') || this.storedUsername;
+  }
+}
