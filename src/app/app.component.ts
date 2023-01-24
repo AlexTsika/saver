@@ -11,10 +11,10 @@ export class AppComponent {
 
   toggleTheme() {
     const body = document.getElementsByTagName('body')[0];
-    if(body.classList.contains('dark-mode')){
+    if (body.classList.contains('dark-mode')) {
       this.renderer.removeClass(body, 'dark-mode');
       this.isDarkTheme = false;
-    }else{
+    } else {
       this.renderer.addClass(body, 'dark-mode');
       this.isDarkTheme = true;
     }
