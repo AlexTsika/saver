@@ -12,7 +12,7 @@ export class LoginsService {
 
   getUsers(username: string, password: string) {
     console.log(username, password);
-    fetch('http://localhost:8000/api/users/' + username)
+    fetch('http://localhost:8000/api/users/name' + username)
       .then(response => response.json())
       .then(data => {
         console.log(data[0].password);
@@ -57,6 +57,6 @@ export class LoginsService {
           alert("Something went wrong");
         }
       })
-    }
-    
+  }
+
 }
