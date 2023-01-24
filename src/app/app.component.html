@@ -1,8 +1,26 @@
-<div class="container-flex m-3 text-center w-50 m-auto">
+<!-- Main Container -->
+<div class="container-flex m-3 text-center w-50 m-auto mb-0 main-content">
     <div class="row mb-2">
-      <div class="col">
-        <img src="assets/saver.jpg" alt="saver" class="img-fluid">
-      </div>
+        <div class="col ">
+            <img src="assets/saver.jpg" alt="saver" class="img-fluid logo-size">
+        </div>
     </div>
+
+    <!-- router-outlet -->
     <router-outlet></router-outlet>
-  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-light text-center footer-custom">
+    <div class="row pt-1">
+        <div class="col">
+            <img src="assets/incognito.png" alt="Incognito's" class="incognito-img">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="incognito-style rounded-pill">Made by The Incognito's</button>
+        </div>
+    </div>
+</footer>

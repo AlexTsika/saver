@@ -2,7 +2,39 @@
 body {
     background-color: #246ee9;
 }
+
 .btn-width {
     width: 5rem;
 }
 
+.logo-size {
+    max-height: 18rem;
+}
+
+.input-width {
+    max-width: 20rem;
+    margin: auto;
+}
+
+.main-content {
+    height: fit-content;
+}
+
+.footer-custom {
+    height: 6rem;
+    bottom: 0;
+    position: absolute;
+}
+
+.incognito-img {
+    height: 3rem;
+    width: auto;
+}
+
+.incognito-style {
+    background-color: #246ee9;
+    border-color: #010101;
+    border-width: 3px;
+    color: white;
+    padding: 4px;
+}
