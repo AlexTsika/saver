@@ -1,32 +1,28 @@
-<div class="row mb-2">
+<div class="row mb-1">
     <div class="col">
-        <h1 class="main">Register</h1>
-    </div>
-</div>
-<div class="row mb-2">
-    <div class="col">
-        <input type="text" id="username" class="form-control input-width" placeholder="Username" [(ngModel)]="name">
-    </div>
-</div>
-<div class="row mb-2">
-    <div class="col">
-        <input type="text" id="email" class="form-control input-width" placeholder="Email" [(ngModel)]="email">
-    </div>
-</div>
-<div class="row mb-2">
-    <div class="col">
-        <input type="password" id="password" class="form-control input-width" placeholder="Password" [(ngModel)]="password">
+        <h3 class="main">Registration</h3>
+        <input type="text" id="username" class="form-control input-custom" placeholder="Username" [(ngModel)]="name">
     </div>
 </div>
 <div class="row mb-1">
     <div class="col">
-        <button (click)="register()" type="submit" class="btn btn-dark btn-width login">Register</button>
+        <input type="text" id="email" class="form-control input-custom" placeholder="Email" [(ngModel)]="email">
     </div>
 </div>
-<div class="row mb-5">
+<div class="row mb-3">
     <div class="col">
-        <button class="btn btn-dark btn-width">
-            <a class="register text-decoration-none text-light" routerLink="/login" routerLinkActive="active">Login</a>
+        <input type="password" id="password" class="form-control input-custom" placeholder="Password" [(ngModel)]="password">
+    </div>
+</div>
+<div class="row mb-1">
+    <div class="col">
+        <button (click)="register()" type="submit" class="btn btn-custom login">Register</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button class="btn btn-custom">
+            <a class="register text-decoration-none text-light" routerLink="/login" routerLinkActive="active">Log in</a>
         </button>
     </div>
 </div>

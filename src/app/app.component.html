@@ -1,5 +1,14 @@
 <!-- Main Container -->
 <div class="container-flex m-3 text-center w-50 m-auto mb-0 main-content">
+
+    <!-- theme toggle -->
+    <div class="row mt-1 mb-1">
+        <div class="col">
+            <button (click)="toggleTheme()"
+                [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}">Theme</button>
+        </div>
+    </div>
+    
     <div class="row mb-2">
         <div class="col ">
             <img src="assets/saver.jpg" alt="saver" class="img-fluid logo-size">
@@ -12,13 +21,13 @@
 </div>
 
 <!-- Footer -->
-<footer class="container-fluid bg-light text-center footer-custom">
+<footer class="container-fluid text-center footer-custom">
     <div class="row pt-1">
         <div class="col">
             <img src="assets/incognito.png" alt="Incognito's" class="incognito-img">
         </div>
     </div>
-    <div class="row">
+    <div class="row pb-1">
         <div class="col">
             <button class="incognito-style rounded-pill">Made by The Incognito's</button>
         </div>
