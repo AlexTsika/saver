@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #246ee9;
+    background-color: white;
 }
 
 .btn-width {
@@ -11,9 +11,11 @@ body {
     max-height: 18rem;
 }
 
-.input-width {
+.input-custom {
     max-width: 20rem;
     margin: auto;
+    border-color: black;
+    border-width: 2px;
 }
 
 .main-content {
@@ -24,6 +26,7 @@ body {
     height: 6rem;
     bottom: 0;
     position: absolute;
+    background-color: #246ee9;
 }
 
 .incognito-img {
@@ -31,10 +34,23 @@ body {
     width: auto;
 }
 
-.incognito-style {
+.btn-custom {
     background-color: #246ee9;
+    color: white;
+    border-color: black;
+    border-width: 2px;
+}
+
+.incognito-style {
+    background-color: white;
     border-color: #010101;
     border-width: 3px;
-    color: white;
+    color: #010101;
     padding: 4px;
 }
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
