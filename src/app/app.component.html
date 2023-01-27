@@ -2,10 +2,14 @@
 <div class="container-fluid m-3 pt-3 text-center m-auto mb-0 main-content">
 
     <!-- theme toggle -->
-    <button (click)="toggleTheme()"
-            [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
-            class="fw-bold float-end">Theme</button>
+    <div class="row justify-content-end">
+        <div class="col">
+            <button (click)="toggleTheme()"
+                [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
+                class="fw-bold float-end">Theme</button>
 
+        </div>
+    </div>
     <!-- logo -->
     <div class="row mb-2">
         <div class="col ">
