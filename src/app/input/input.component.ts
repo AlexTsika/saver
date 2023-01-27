@@ -29,6 +29,8 @@ export class InputComponent {
       console.log(`Total savings after ${year} years: ${this.totalSavings}`);
       localStorage.setItem('totalSavings', this.totalSavings);
       localStorage.setItem('year', this.years);
+      console.log(localStorage.getItem('totalSavings'));
+      console.log(localStorage.getItem('year'));
     }
   }
     
