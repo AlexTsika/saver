@@ -14,24 +14,28 @@ ngOnInit(): void {
   this.renderchart();
 }
 
-renderchart(){new Chart("linechart", {
-    type: 'line',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+renderchart(){
+  let yearData:any = JSON.parse(localStorage.getItem('year'));
+  let totalsavingsData:string = JSON.parse(localStorage.getItem('totalsavings'));
 
+  new Chart("linechart", {
+      type: 'line',
+      data: {
+          labels: yearData,
+          datasets: [{
+              label: 'Total Savings',
+              data: totalsavingsData,
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
 }
+
 }

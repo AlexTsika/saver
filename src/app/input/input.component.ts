@@ -29,8 +29,8 @@ export class InputComponent {
           this.totalSavings += this.totalSavings * (this.interestRate / 12);
         }
       }
-      localStorage.setItem('totalSavings', this.totalSavings);
-      localStorage.setItem('year', this.years);
+        localStorage.setItem('totalSavings', JSON.stringify(this.totalSavings));
+        localStorage.setItem('year', JSON.stringify(this.years));
     }
     this.router.navigate(['/results']);
   }
