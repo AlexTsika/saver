@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-input',
@@ -13,6 +14,8 @@ export class InputComponent {
   totalSavings: any = '';
   storedUsername: string = 'username';
 
+  constructor(private router: Router) {}
+
   calculateSavings() {
     let savingsByYear = [5, 10, 15, 20, 25, 30];
 
@@ -26,15 +29,14 @@ export class InputComponent {
           this.totalSavings += this.totalSavings * (this.interestRate / 12);
         }
       }
-      console.log(`Total savings after ${year} years: ${this.totalSavings}`);
       localStorage.setItem('totalSavings', this.totalSavings);
       localStorage.setItem('year', this.years);
-      console.log(localStorage.getItem('totalSavings'));
-      console.log(localStorage.getItem('year'));
     }
+    this.router.navigate(['/results']);
   }
     
   ngOnInit() {
     this.storedUsername = localStorage.getItem('username') || this.storedUsername;
   }
 }
+
