@@ -1,13 +1,10 @@
 <!-- main Container -->
-<div class="container-flex m-3 text-center w-50 m-auto mb-0 main-content">
+<div class="container-fluid m-3 pt-3 text-center m-auto mb-0 main-content">
 
     <!-- theme toggle -->
-    <div class="row mt-1 mb-2">
-        <div class="col">
-            <button (click)="toggleTheme()"
-                [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}" class="fw-bold">Theme</button>
-        </div>
-    </div>
+    <button (click)="toggleTheme()"
+            [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
+            class="fw-bold float-end">Theme</button>
 
     <!-- logo -->
     <div class="row mb-2">
@@ -26,7 +23,8 @@
     <div class="row pt-1">
         <div class="col">
             <img src="assets/incognito.png" alt="Incognito's" class="incognito-img"><br>
-            <button class="incognito-style rounded-pill ps-3 pe-3"><a href="https://github.com/AlexTsika/saver-angular" target="_blank" class="text-decoration-none text-dark">Made by The Incognito's</a></button>
+            <button class="incognito-style rounded-pill ps-3 pe-3"><a href="https://github.com/AlexTsika/saver-angular"
+                    target="_blank" class="text-decoration-none text-dark">Made by The Incognito's</a></button>
         </div>
     </div>
 </footer>
