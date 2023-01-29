@@ -19,7 +19,7 @@ body {
 }
 
 .footer-custom {
-    height: 6rem;
+    height: fit-content;
     bottom: 0;
     background-color: #246ee9;
 }
@@ -78,8 +78,17 @@ body.dark-mode {
 }
 
 .main-content {
-    min-height: calc(100vh - 6rem);
+    min-height: 100vh;
     /* 6rem is the height of the footer */
-    margin-bottom: -6rem;
-    /* negative margin to pull the main content up by the height of the footer */
+}
+
+.footer-icons {
+    color: white;
+    font-size: larger;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.footer-icons:hover {
+    color: #010101;
 }
