@@ -15,16 +15,17 @@ ngOnInit(): void {
 }
 
 renderchart(){
-  let yearData:any = JSON.parse(localStorage.getItem('year'));
-  let totalsavingsData:string = JSON.parse(localStorage.getItem('totalsavings'));
-
+  let data:any = (localStorage.getItem('results'));
+  console.log(data);
+  
+  
   new Chart("linechart", {
       type: 'line',
       data: {
-          labels: yearData,
+          labels: [5, 10, 15, 20, 25, 30],
           datasets: [{
               label: 'Total Savings',
-              data: totalsavingsData,
+              data: data.savings,
               borderWidth: 1
           }]
       },
