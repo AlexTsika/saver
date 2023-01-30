@@ -1,7 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './services/auth.service';
-import { LoginsService } from './services/logins.service';
 
 @Component({
   selector: 'app-root',
