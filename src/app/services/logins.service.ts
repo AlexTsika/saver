@@ -74,7 +74,7 @@ export class LoginsService {
       });
   }
 
-  // update password or redirect to the input component
+  // update password and redirect to the input component
   updatePassword(userId: string, password: string) {
     fetch(`http://localhost:8000/api/users/id/${userId}`, {
       method: "PATCH",
