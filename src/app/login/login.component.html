@@ -2,17 +2,21 @@
   <div class="col">
     <h3 class="main">Log in</h3>
     <p>
+      <!-- inoutfield for the username -->
       <input type="text" id="username" class="form-control input-width input-custom" placeholder="Username"
       [(ngModel)]="username">
     </p>
     <p>
+      <!-- inputfield for password -->
       <input type="password" id="password" class="form-control input-width input-custom" placeholder="Password"
       (keyup.enter)="login()" [(ngModel)]="password">
     </p>
     <p>
+      <!-- submit button to login -->
       <button (click)="login()" type="submit" class="btn btn-custom login">Log in</button>
     </p>
     <p>
+      <!-- redirect button to registration page -->
       <button class="btn btn-custom ">
         <a class="register text-decoration-none text-light" routerLink="/register" routerLinkActive="active">Register</a>
       </button>  
