@@ -2,19 +2,24 @@
     <div class="col">
         <h3 class="main">Registration</h3>
         <p>
+            <!-- input field for username -->
             <input type="text" id="username" class="form-control input-custom" placeholder="Username" [(ngModel)]="name">
         </p>
         <p>
+            <!-- input field for email -->
             <input type="text" id="email" class="form-control input-custom" placeholder="Email" [(ngModel)]="email">
         </p>
         <p>
+            <!-- input field for password -->
             <input type="password" id="password" class="form-control input-custom" placeholder="Password"
             [(ngModel)]="password">
         </p>
         <p>
+            <!-- button to register the userdetails -->
             <button (click)="register()" type="submit" class="btn btn-custom login">Register</button>
         </p>
         <p>
+            <!-- button to login -->
             <button class="btn btn-custom">
                 <a class="register text-decoration-none text-light" routerLink="/login" routerLinkActive="active">Log in</a>
             </button>    
