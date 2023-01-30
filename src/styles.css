@@ -56,7 +56,7 @@ body.dark-mode {
     color: #212529;
     border-color: #246ee9;
     border-width: 2px;
-    width: 6rem;
+    width: 10rem;
 }
 
 .light-mode-btn {
@@ -64,7 +64,7 @@ body.dark-mode {
     color: #f8f9fa;
     border-color: #246ee9;
     border-width: 2px;
-    width: 6rem;
+    width: 10rem;
 }
 
 .dark-mode-btn:hover {

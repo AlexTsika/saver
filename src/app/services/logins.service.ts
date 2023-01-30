@@ -53,4 +53,40 @@ export class LoginsService {
         }
       });
   }
+
+  deleteUser(userId: string) {
+    fetch(`http://localhost:8000/api/users/id/${userId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${environment.bearerToken}`
+      }
+    })
+      .then(response => {
+        if (response.status === 200) {
+          alert("User deleted successfully");
+          this.router.navigate(["/login"]);
+        } else {
+          alert("Could not delete user");
+        }
+      });
+  }
+
+  updatePassword(userId: string, password: string) {
+    fetch(`http://localhost:8000/api/users/id/${userId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${environment.bearerToken}`
+      },
+      body: JSON.stringify({ password })
+    })
+      .then(response => {
+        if (response.status === 200) {
+          alert("Password updated successfully");
+          this.router.navigate(["/input"]);
+        } else {
+          alert("Could not update password");
+        }
+      });
+  }
 }

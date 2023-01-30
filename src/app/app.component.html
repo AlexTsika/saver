@@ -6,11 +6,13 @@
         <div class="col">
             <button (click)="toggleTheme()"
                 [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
-                class="fw-bold float-end">Theme</button>
-            <!-- logout button -->
-            <button (click)="logout()"
-                [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
-                class="fw-bold float-start">Logout</button>
+                class="fw-bold float-end me-2">Theme</button>
+            <p class="float-start">
+                <!-- logout button -->
+                <button (click)="logout()"
+                    [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
+                    class="fw-bold mb-2">Logout</button> <br>
+            </p>
         </div>
     </div>
 
@@ -52,7 +54,7 @@
                         </a>
                         <a href="https://github.com/AlexTsika" target="_blank">
                             <i class="fa-brands fa-github footer-icons"></i>
-                        </a>         
+                        </a>
                     </p>
                     <p class="mt-0 mb-0">
                         <!-- Milan links -->
@@ -64,7 +66,7 @@
                         </a>
                         <a href="https://github.com/MilanVermeulen" target="_blank">
                             <i class="fa-brands fa-github footer-icons"></i>
-                        </a>         
+                        </a>
                     </p>
                     <p class="mt-1 mb-0">
                         <!-- Remco links -->
@@ -76,7 +78,7 @@
                         </a>
                         <a href="https://github.com/rem3600" target="_blank">
                             <i class="fa-brands fa-github footer-icons"></i>
-                        </a>         
+                        </a>
                     </p>
                 </div>
             </div>
