@@ -14,6 +14,7 @@ export class InputComponent {
   totalSavings: any = '';
   storedUsername: string = 'username';
   storedUserId: number | undefined;
+  targetAmount: any = '';
 
   constructor(private router: Router) { }
 //calculating savings based on monthly contribtutions and interestrate

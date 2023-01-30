@@ -14,16 +14,10 @@
             placeholder="Interest Rate" (keyup.enter)="calculateSavings()">
         </p>
         <p>
-            <input type="number" class="form-control input-custom" placeholder="Target Amount" (keyup.enter)="calculateSavings()">
+            <input id="targetAmount" [(ngModel)]="targetAmount" type="number" class="form-control input-custom" placeholder="Target Amount" (keyup.enter)="calculateSavings()">
         </p>
         <p>
             <button class="btn btn-custom" (click)="calculateSavings()">Calculate</button>
         </p>
     </div>
 </div>
-
-<!-- <div class="row mb-3">
-    <div class="col">
-        <p>{{ totalSavings }}</p>
-    </div>
-</div> -->
