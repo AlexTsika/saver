@@ -39,6 +39,8 @@ export class InputComponent {
 
 //set results array in local storage
     localStorage.setItem('results', JSON.stringify(results));
+    localStorage.setItem('targetAmount', JSON.stringify(this.targetAmount));
+    console.log(localStorage.getItem('targetAmount'));
     console.log(localStorage.getItem('results'));
     this.router.navigate(['/results']);
   }

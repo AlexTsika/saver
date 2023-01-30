@@ -12,6 +12,7 @@ constructor() {}
 
 ngOnInit(): void {
   this.renderchart();
+  this.goal();
 }
 
 renderchart() {
@@ -43,6 +44,14 @@ renderchart() {
           }
       }
   });
+}
+
+goal(){
+  let target: any = (localStorage.getItem('targetAmount'));
+  let data: any = (localStorage.getItem('results'));
+  data = JSON.parse(data);
+  console.log(target);
+
 }
 
 }
