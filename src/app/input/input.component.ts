@@ -27,7 +27,7 @@ export class InputComponent {
       for (let i = 0; i < this.years; i++) {
         for (let j = 0; j < 12; j++) {
           this.totalSavings += this.monthlyContribution;
-          this.totalSavings += this.totalSavings * (this.interestRate / 12);
+          this.totalSavings += this.totalSavings * ((this.interestRate/100)/12);
         }
       }
       results.push({ year: this.years, savings: this.totalSavings });

@@ -14,9 +14,16 @@ ngOnInit(): void {
   this.renderchart();
 }
 
-renderchart(){
-  let data:any = (localStorage.getItem('results'));
-  console.log(data);
+renderchart() {
+    let data: any = (localStorage.getItem('results'));
+    data = JSON.parse(data);
+    // create a new array from the data object with only savings
+    let savings = [];
+    for (let i = 0; i < data.length; i++) {
+      savings.push(data[i].savings);
+    }
+    console.log(savings);
+
   
   
   new Chart("linechart", {
@@ -25,7 +32,7 @@ renderchart(){
           labels: [5, 10, 15, 20, 25, 30],
           datasets: [{
               label: 'Total Savings',
-              data: data.savings,
+              data: savings,
               borderWidth: 1
           }]
       },
