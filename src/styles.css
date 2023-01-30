@@ -92,3 +92,7 @@ body.dark-mode {
 .footer-icons:hover {
     color: #010101;
 }
+
+.logout-btn:hover {
+    background-color: #246ee9;
+    }
