@@ -13,6 +13,7 @@ export class InputComponent {
   years: any = '';
   totalSavings: any = '';
   storedUsername: string = 'username';
+  storedUserId: number | undefined;
 
   constructor(private router: Router) { }
 
@@ -41,6 +42,6 @@ export class InputComponent {
 
   ngOnInit() {
     this.storedUsername = localStorage.getItem('username') || this.storedUsername;
+    this.storedUserId = Number(localStorage.getItem('userId')) || this.storedUserId;
   }
 }
-
