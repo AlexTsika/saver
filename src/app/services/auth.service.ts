@@ -8,6 +8,7 @@ export class AuthService {
   return !!window.localStorage.getItem('username');
   }
 
+  // remove userdetails from localStorage on logout
   logout () {
     window.localStorage.removeItem('username');
     window.localStorage.removeItem('userId');
