@@ -1,15 +1,18 @@
 <!-- main Container -->
 <div class="container-fluid m-3 pt-3 text-center m-auto mb-0 main-content">
 
-    <!-- theme toggle -->
+    <!-- theme toggle-->
     <div class="row justify-content-end">
         <div class="col">
-            <button [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}" class="float-end btn border border-2 rounded-pill text-black" (click)="toggleTheme()"><i
-                class="fa-solid fa-sun text-black"></i> / <i class="fa-solid fa-moon text-black"></i></button>
-            <button (click)="logout()" class="float-start">Logout</button>
+            <button [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}" class="float-end btn rounded-pill" (click)="toggleTheme()"><i
+                class="fa-solid fa-sun"></i> / <i class="fa-solid fa-moon"></i></button>
+            <!-- logout button -->
+            <button (click)="logout()"
+            [ngClass]="{'btn': true, 'dark-mode-btn': isDarkTheme, 'light-mode-btn': !isDarkTheme}"
+            class="fw-bold mb-2 float-start rounded-pill">Logout</button>
         </div>
-
     </div>
+
     <!-- logo -->
     <div class="row mb-2">
         <div class="col ">
@@ -48,7 +51,7 @@
                         </a>
                         <a href="https://github.com/AlexTsika" target="_blank">
                             <i class="fa-brands fa-github footer-icons"></i>
-                        </a>         
+                        </a>
                     </p>
                     <p class="mt-0 mb-0">
                         <!-- Milan links -->
@@ -60,7 +63,7 @@
                         </a>
                         <a href="https://github.com/MilanVermeulen" target="_blank">
                             <i class="fa-brands fa-github footer-icons"></i>
-                        </a>         
+                        </a>
                     </p>
                     <p class="mt-1 mb-0">
                         <!-- Remco links -->
@@ -72,7 +75,7 @@
                         </a>
                         <a href="https://github.com/rem3600" target="_blank">
                             <i class="fa-brands fa-github footer-icons"></i>
-                        </a>         
+                        </a>
                     </p>
                 </div>
             </div>
