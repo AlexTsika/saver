@@ -1,4 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,7 @@ import { Component, Renderer2 } from '@angular/core';
 })
 export class AppComponent {
   isDarkTheme: boolean = false;
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private router: Router, private authService: AuthService) { }
 
   toggleTheme() {
     const body = document.getElementsByTagName('body')[0];
@@ -18,5 +20,10 @@ export class AppComponent {
       this.renderer.addClass(body, 'dark-mode');
       this.isDarkTheme = true;
     }
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
   }
 }
