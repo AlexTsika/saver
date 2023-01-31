@@ -43,8 +43,6 @@ export class InputComponent {
     this.router.navigate(['/results']);
   }
 
-  
-
   ngOnInit() {
     this.storedUsername = localStorage.getItem('username') || this.storedUsername;
     this.storedUserId = Number(localStorage.getItem('userId')) || this.storedUserId;

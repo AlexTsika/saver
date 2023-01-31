@@ -1,7 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './services/auth.service';
-import { LoginsService } from './services/logins.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,11 @@ import { LoginsService } from './services/logins.service';
 })
 export class AppComponent {
   isDarkTheme: boolean = false;
-  constructor(private renderer: Renderer2, private router: Router, private authService: AuthService) { }
+  isUserLoggedIn: boolean;
+  
+  constructor(private renderer: Renderer2, private router: Router, private authService: AuthService) { 
+    this.isUserLoggedIn = this.authService.isLoggedIn();
+  }
 
   toggleTheme() {
     const body = document.getElementsByTagName('body')[0];
@@ -27,4 +30,5 @@ export class AppComponent {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+
 }
