@@ -19,6 +19,7 @@ export class LoginComponent {
 
   login() {
    this.loginsService.getUsers(this.username, this.password);
+   
   }
 
 

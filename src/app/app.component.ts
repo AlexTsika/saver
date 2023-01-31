@@ -9,7 +9,11 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   isDarkTheme: boolean = false;
-  constructor(private renderer: Renderer2, private router: Router, private authService: AuthService) { }
+  isUserLoggedIn: boolean;
+  
+  constructor(private renderer: Renderer2, private router: Router, private authService: AuthService) { 
+    this.isUserLoggedIn = this.authService.isLoggedIn();
+  }
 
   toggleTheme() {
     const body = document.getElementsByTagName('body')[0];
@@ -26,4 +30,5 @@ export class AppComponent {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
+
 }

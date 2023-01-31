@@ -89,4 +89,9 @@ export class LoginsService {
         }
       });
   }
+
+  refreshPage() {
+    location.reload();
+  }
+  
 }
