@@ -71,7 +71,7 @@ goal(){
   for (let i = 0; i < data.length; i++){
     if (data[i].savings <= target && data[i+1].savings > target){
         console.log(data[i].year)
-        this.goals=(data[i].year);
+        this.goals=(data[i+1].year);
     }
     else if (target > data[data.length - 1].savings) {
     this.goals = 'more than 30'
