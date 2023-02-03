@@ -25,8 +25,5 @@ export class RegisterComponent {
     this.loginsService.register(this.name, this.email, this.password)
     }
 
-  ngOnInit(): void {
-  }
-
 }
 

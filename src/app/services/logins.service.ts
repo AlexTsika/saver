@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 export class LoginsService {
   constructor(private router: Router) {}
 
+  // get the users from the API, check if the password is valid and redirect to the input component
   getUsers(username: string, password: string) {
     fetch(`http://localhost:8000/api/users/name/${username}`, {
       headers: {
@@ -31,6 +32,7 @@ export class LoginsService {
       });
   }
 
+  // register new users and redirect them to the login component
   register(name: string, email: string, password: string) {
     fetch("http://localhost:8000/api/users", {
       method: "POST",
@@ -54,6 +56,7 @@ export class LoginsService {
       });
   }
 
+  // delete users and redirect them to the login component
   deleteUser(userId: string) {
     fetch(`http://localhost:8000/api/users/id/${userId}`, {
       method: "DELETE",
@@ -71,6 +74,7 @@ export class LoginsService {
       });
   }
 
+  // update password and redirect to the input component
   updatePassword(userId: string, password: string) {
     fetch(`http://localhost:8000/api/users/id/${userId}`, {
       method: "PATCH",
@@ -89,4 +93,9 @@ export class LoginsService {
         }
       });
   }
+
+  refreshPage() {
+    location.reload();
+  }
+  
 }
