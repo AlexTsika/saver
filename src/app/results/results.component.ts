@@ -11,21 +11,6 @@ Chart.register(...registerables);
 export class ResultsComponent {
     constructor(private router: Router) { }
 
-<<<<<<< HEAD
-ngOnInit(): void {
-  this.renderchart();
-  this.goal();
-}
-
-renderchart() {
-//retrieve results array from local storage
-    let data: any = (localStorage.getItem('results'));
-    data = JSON.parse(data);
-// create a new array from the data object with only savings
-    let savings = [];
-    for (let i = 0; i < data.length; i++) {
-      savings.push(data[i].savings);
-=======
     ngOnInit(): void {
         this.renderchart();
     }
@@ -65,7 +50,6 @@ renderchart() {
     backToInput() {
         localStorage.removeItem('results');
         this.router.navigate(['/input']);
->>>>>>> 3402e79bf682175d679f547e4b104ace0166e266
     }
 
 goal(){
