@@ -13,3 +13,12 @@
         <button class="btn btn-custom rounded-pill" (click)="backToInput()">Go Back</button>
     </div>
 </div>
+<div class="row mt-3">
+    <div class="col-3 m-auto">
+        <div class="">
+            <p class="" *ngFor="let result of data">
+                {{ result.savings |  currency:'EUR' }} na {{ result.year }} jaar
+            </p>
+        </div>
+    </div>
+</div>

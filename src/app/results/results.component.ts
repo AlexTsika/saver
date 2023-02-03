@@ -11,6 +11,8 @@ Chart.register(...registerables);
 })
 export class ResultsComponent {
     
+    target: any = (localStorage.getItem('targetAmount'));
+    data: any = (localStorage.getItem('results'));
     goals:any;
 
     constructor(private router: Router) {
@@ -59,21 +61,20 @@ export class ResultsComponent {
     }
 
 goal(){
-  let target: any = (localStorage.getItem('targetAmount'));
-  let data: any = (localStorage.getItem('results'));
-  data = JSON.parse(data);
-  console.log(data);
-  console.log(target);
-    if (target <= data[0].savings) {
+  
+  this.data = JSON.parse(this.data);
+  console.log(this.data);
+  console.log(this.target);
+    if (this.target <= this.data[0].savings) {
     console.log("less than 5");
     this.goals = "less than 5";
   }
-  for (let i = 0; i < data.length; i++){
-    if (data[i].savings <= target && data[i+1].savings > target){
-        console.log(data[i].year)
-        this.goals=(data[i].year);
+  for (let i = 0; i < this.data.length; i++){
+    if (this.data[i].savings <= this.target && this.data[i+1].savings > this.target){
+        console.log(this.data[i].year)
+        this.goals=(this.data[i].year);
     }
-    else if (target > data[data.length - 1].savings) {
+    else if (this.target > this.data[this.data.length - 1].savings) {
     this.goals = 'more than 30'
   }
   }  
