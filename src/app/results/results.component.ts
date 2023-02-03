@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Chart, registerables } from 'node_modules/chart.js'
 import { Router } from '@angular/router';
+import { VirtualTimeScheduler } from 'rxjs';
 Chart.register(...registerables);
 
 @Component({
@@ -9,11 +10,17 @@ Chart.register(...registerables);
     styleUrls: ['./results.component.css']
 })
 export class ResultsComponent {
-    constructor(private router: Router) { }
+    
+    goals:any;
+
+    constructor(private router: Router) {
+        this.goals = 0;
+     }
 
     ngOnInit(): void {
         this.renderchart();
-    }
+        this.goal();
+     }
 
     renderchart() {
         //retrieve results array from local storage
@@ -55,8 +62,13 @@ goal(){
   let target: any = (localStorage.getItem('targetAmount'));
   let data: any = (localStorage.getItem('results'));
   data = JSON.parse(data);
+  console.log(data);
   console.log(target);
-
+  for (let i = 0; i < data.length; i++){
+    if (data[i].savings <= target && data[i+1].savings > target){
+        console.log(data[i].year)
+        this.goal=(data[i].year);
+    }
+  }  
 }
-
 }
