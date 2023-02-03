@@ -48,7 +48,6 @@ export class ResultsComponent {
 
     // back to input button
     backToInput() {
-        localStorage.removeItem('results');
         this.router.navigate(['/input']);
     }
 
