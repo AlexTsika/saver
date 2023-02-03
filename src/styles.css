@@ -3,6 +3,10 @@ body {
     background-color: #f8f9fa;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+  }
+
 .btn-width {
     width: 5rem;
 }
@@ -34,7 +38,7 @@ body {
     color: white;
     border-color: black;
     border-width: 2px;
-    width: 6rem;
+    width: 8rem;
 
 }
 
