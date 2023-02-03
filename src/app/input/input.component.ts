@@ -37,7 +37,7 @@ export class InputComponent {
       results.push({ year: this.years, savings: this.totalSavings });
     }
 
-//set results array in local storage
+//set results array and target amount in local storage and route  to results component
     localStorage.setItem('results', JSON.stringify(results));
     localStorage.setItem('targetAmount', JSON.stringify(this.targetAmount));
     console.log(localStorage.getItem('targetAmount'));
