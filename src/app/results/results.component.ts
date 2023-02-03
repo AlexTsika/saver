@@ -64,11 +64,18 @@ goal(){
   data = JSON.parse(data);
   console.log(data);
   console.log(target);
+    if (target <= data[0].savings) {
+    console.log("less than 5");
+    this.goals = "less than 5";
+  }
   for (let i = 0; i < data.length; i++){
     if (data[i].savings <= target && data[i+1].savings > target){
         console.log(data[i].year)
-        this.goal=(data[i].year);
+        this.goals=(data[i].year);
     }
+    else if (target > data[data.length - 1].savings) {
+    this.goals = 'more than 30'
+  }
   }  
 }
 }
