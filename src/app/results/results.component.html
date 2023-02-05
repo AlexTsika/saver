@@ -1,6 +1,6 @@
 <div class="row mb-2">
     <div class="col">
-        <h3>{{goals}} years to target amount.</h3>
+        <h3>{{goals}} years to target amount</h3>
     </div>
 </div>
 <div class="row pt-2 pb-3">
@@ -8,17 +8,17 @@
         <canvas id="linechart" class="bg-light rounded d-inline p-3"></canvas>
     </div>
 </div>
-<div class="row mb-2">
-    <div class="col">
-        <button class="btn btn-custom rounded-pill" (click)="backToInput()">Back to Input</button>
-    </div>
-</div>
-<div class="row mt-3">
+<div class="row">
     <div class="col-8 m-auto">
         <div class="">
             <p class="" *ngFor="let result of data">
                 {{ result.savings |  currency:'EUR' }} after {{ result.year }} years
             </p>
         </div>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col">
+        <button class="btn btn-custom rounded-pill" (click)="backToInput()">Back to Input</button>
     </div>
 </div>
