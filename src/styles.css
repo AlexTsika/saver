@@ -42,6 +42,12 @@ body::-webkit-scrollbar{
 
 }
 
+.btn-custom:hover {
+    background-color: #010101;
+    color: white;
+    border: solid #246ee9 2px;
+}
+
 .incognito-style {
     background-color: white;
     border-color: #010101;
@@ -100,3 +106,7 @@ body.dark-mode {
 .logout-btn:hover {
     background-color: #246ee9;
     }
+
+.custom-savings {
+    font-size: larger;
+}

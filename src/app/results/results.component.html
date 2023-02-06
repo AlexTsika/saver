@@ -9,12 +9,8 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-8 m-auto">
-        <div class="">
-            <p class="" *ngFor="let result of data">
-                {{ result.savings |  currency:'EUR' }} after {{ result.year }} years
-            </p>
-        </div>
+    <div class="col-auto m-auto m-3 mt-5 mb-5 custom-savings" *ngFor="let result of data">
+        {{ result.savings |  currency:'EUR' }} after {{ result.year }} years
     </div>
 </div>
 <div class="row mb-4">
