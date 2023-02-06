@@ -2,6 +2,10 @@
     <div class="col">
         <h3 class="mt-2 mb-4">Hello {{ storedUsername }}, let's start saving!</h3>
         <p>
+            <input id="bankName" [(ngModel)]="bankName" type="text" class="form-control input-custom"
+            placeholder="Bank Name">
+        </p>
+        <p>
             <input id="initialAmount" [(ngModel)]="initialAmount" type="number" class="form-control input-custom"
             placeholder="Current Savings">
         </p>

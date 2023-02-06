@@ -7,10 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent {
-  initialAmount: any = '';
+  initialAmount: any  = '';
   monthlyContribution: any = '';
   interestRate: any = '';
   years: any = '';
+  bankName: string = '';
   totalSavings: any = '';
   storedUsername: string = 'username';
   storedUserId: number | undefined;
@@ -38,10 +39,9 @@ export class InputComponent {
     }
 
 //set results array in local storage
+    localStorage.setItem('bankName', this.bankName);
     localStorage.setItem('results', JSON.stringify(results));
     localStorage.setItem('targetAmount', JSON.stringify(this.targetAmount));
-    console.log(localStorage.getItem('targetAmount'));
-    console.log(localStorage.getItem('results'));
     this.router.navigate(['/results']);
   }
 
