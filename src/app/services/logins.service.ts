@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as bcrypt from 'bcryptjs';
 import { environment } from '../environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { environment } from '../environments/environment';
 
 
 export class LoginsService {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private toastr: ToastrService) {}
 
   // get the users from the API, check if the password is valid and redirect to the input component
   getUsers(username: string, password: string) {
@@ -26,7 +27,7 @@ export class LoginsService {
             window.localStorage.setItem("userId", data.id);
             this.router.navigate(["/input"]);
           } else {
-            alert("Wrong password");
+            this.toastr.error("Wrong password", "401" );
           }
         });
       });
@@ -48,10 +49,10 @@ export class LoginsService {
     })
       .then(response => {
         if (response.status === 201) {
-          alert("Registration successful");
+          this.toastr.success("Registration successful", "201");
           this.router.navigate(["/login"]);
         } else {
-          alert("Something went wrong");
+          this.toastr.error("Something went wrong", "401");
         }
       });
   }
@@ -66,10 +67,10 @@ export class LoginsService {
     })
       .then(response => {
         if (response.status === 200) {
-          alert("User deleted successfully");
+          this.toastr.success("User deleted successfully", "200");
           this.router.navigate(["/login"]);
         } else {
-          alert("Could not delete user");
+          this.toastr.error("Could not delete user", "401");
         }
       });
   }
@@ -86,10 +87,10 @@ export class LoginsService {
     })
       .then(response => {
         if (response.status === 200) {
-          alert("Password updated successfully");
+          this.toastr.success("Password updated successfully", "200");
           this.router.navigate(["/input"]);
         } else {
-          alert("Could not update password");
+          this.toastr.error("Could not update password", "401");
         }
       });
   }
