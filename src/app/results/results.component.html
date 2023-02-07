@@ -9,12 +9,14 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-auto m-auto m-3 mt-5 mb-5 custom-savings" *ngFor="let result of data">
-        {{ result.savings |  currency:'EUR' }} after {{ result.year }} years
+    <div class="col-md-4 m-auto m-3 mt-md-1 mb-md-3 custom-savings" *ngFor="let result of data">
+        <p class="shadow-lg border border-dark border-2 rounded p-md-3 w-75 m-auto mt-2">
+            <strong>{{ result.savings |  currency:'EUR' }} after {{ result.year }} years</strong>
+        </p>
     </div>
 </div>
 <div class="row mb-4">
     <div class="col">
-        <button class="btn btn-custom rounded-pill" (click)="backToInput()">Back to Input</button>
+        <button class="btn btn-custom rounded-pill p-md-2 mt-3" (click)="backToInput()">Back to Input</button>
     </div>
 </div>
